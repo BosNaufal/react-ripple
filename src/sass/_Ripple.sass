@@ -10,12 +10,13 @@
 
 .Ripple
   position: absolute
-  background: rgba(0,0,0,.1)
+  background: rgba(0,0,0,0.2)
   border-radius: 50%
+  opacity: 1
   transform: scale(0)
 
   &.is-reppling
-    animation: ripple 0.35s linear
+    animation: ripple 0.5s linear
 
   &-parent
     // Parent Position Should be Relative, Absolute or Fixed Not Static
@@ -23,6 +24,7 @@
     // position: absolute
     // position: fixed
     overflow: hidden
+
 
 @keyframes ripple
   100%
