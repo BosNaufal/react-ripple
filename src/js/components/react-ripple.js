@@ -10,6 +10,8 @@
 
 import React from 'react';
 
+require('../../sass/_Ripple.sass')
+
 class Ripple extends React.Component {
 
   constructor() {

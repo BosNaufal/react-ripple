@@ -22,9 +22,6 @@ import ReactDOM from 'react-dom';
 
 import { RippleButton } from 'react-ripple-effect';
 
-// Don't Forget to Include The Sass File~
-require('../../sass/_Ripple.sass')
-
 class App extends React.Component {
 
   render(){
