@@ -33,7 +33,8 @@ class RippleButton extends React.Component {
     // Get Cursor Position
     let cursorPos = {
       top: e.clientY,
-      left: e.clientX
+      left: e.clientX,
+      time: Date.now()
     }
     this.setState({ cursorPos: cursorPos })
   }

@@ -67,14 +67,17 @@ class Ripple extends React.Component {
   componentWillReceiveProps(nextProps) {
     let cursorPos = nextProps.cursorPos
 
-    // If Has Animated, set state to "false" First
-    if(this.state.animate){
-      this.setState({ animate: false }, () => {
-        this.reppling(cursorPos)
-      })
+    // Prevent Component duplicates do ripple effect at the same time
+    if(cursorPos.time !== this.props.cursorPos.time){
+      // If Has Animated, set state to "false" First
+      if(this.state.animate){
+        this.setState({ animate: false }, () => {
+          this.reppling(cursorPos)
+        })
+      }
+      // else, Do Reppling
+      else this.reppling(cursorPos)
     }
-    // else, Do Reppling
-    else this.reppling(cursorPos)
   }
 
 }

@@ -70,7 +70,9 @@ class RippleButton extends React.Component {
     // Get Cursor Position
     let cursorPos = {
       top: e.clientY,
-      left: e.clientX
+      left: e.clientX,
+      // Prevent Component duplicates do ripple effect at the same time
+      time: Date.now()
     }
     this.setState({ cursorPos: cursorPos })
   }
@@ -86,7 +88,9 @@ You need to describe the cursor position ( when parent is clicked ) with the str
 ```javascript
 let cursorPos = {
   top: e.clientY,
-  left: e.clientX
+  left: e.clientX,
+  // Prevent Component duplicates do ripple effect at the same time
+  time: Date.now()
 }
 ```
 
